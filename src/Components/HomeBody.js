@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../Components/HomeBody.css"; 
-
+import SignUp from './SignUp';
 function HomeBody(){
     const RightStyle = {
         color: "white",
