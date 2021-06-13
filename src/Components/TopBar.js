@@ -1,33 +1,27 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button,Form,Navbar,FormControl,Nav,NavDropdown } from 'react-bootstrap';
+import "../Components/TopBar.css";
+
+
+
 
 function TopBar(){
  return <div>
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-  <Navbar.Brand href="#home">Student Support System</Navbar.Brand>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-  <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="mr-auto">
-      <Nav.Link href="#features">Academic Problem</Nav.Link>
-      <Nav.Link href="#pricing">General Problem</Nav.Link>
-      <Nav.Link eventKey={2} href="#memes">
-        Coding Problem
-      </Nav.Link>
-      {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-      </NavDropdown> */}
-    </Nav>
-    <Nav>
-      <Nav.Link href="#deets">Login</Nav.Link>
-      <Nav.Link href="#deets">Sign Up</Nav.Link>
-    </Nav>
-  </Navbar.Collapse>
-</Navbar>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand">STUDENT SUPPORT PORTAL</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#genralPro">Genral Problem </a>
+      <a class="nav-item nav-link" href="#acedemicPro">Academic Problem</a>
+      <a class="nav-item nav-link" href="#codingPro">Coding Problem</a>
+      <button type="button" class="btn btn-link">Log In</button>
+      <button type="button" class="btn btn-primary">Sign Up</button>
+    </div>
+  </div>
+</nav>
  </div>
 }
 

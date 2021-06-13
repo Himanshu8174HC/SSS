@@ -1,0 +1,67 @@
+.Bodyrow{
+    display: flex !important;
+    flex-direction: row !important;
+    
+    height :100%
+    
+}
+.Introbody{
+  margin-top: 10vw;
+  width: 40vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.Introbody h1{
+    font-family: Medium Poppins;;
+    margin-bottom: 2vw;
+    text-align: left;
+    font-size: 3vw;
+}
+
+.Introbody p{
+    font-family:  Bold Poppins;
+    text-align: left;
+    font-size: 1.5vw;
+    text-align: justify;
+}
+.formBody{
+    margin-top: -6vw ;
+    
+}
+
+.FormControl{
+    margin-top:2.2vw;
+    border-radius: 10px;
+    width: 40vw;
+    margin-left: 4vw;
+    margin-right: 7vw;
+    background-color: #b5c0c4;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    padding-top: 10vw;
+    padding-bottom: 7vw
+    
+
+}
+form  h3{
+    text-align: center !important;
+    margin-bottom: 1vw;
+    
+}
+.form-group{
+    margin-bottom: 1.5vw;
+    margin-top: 1.5vw;
+}
+.forgot-password{
+    padding-top: 0.5vw;
+}
+.btn-block{
+    background-color: #306363 !important;
+    padding: 0.7vw 1vw 0.7vw 1vw;
+    font-size: 1.2vw;
+}
+.form-group3{
+    margin-top: -0.7vw;
+    margin-bottom: 1vw;
+}

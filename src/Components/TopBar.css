@@ -1,0 +1,41 @@
+.navbar{
+    height: 5vw;
+    background-color:#a7a7a7 !important;
+    font-family:  Bold Poppins;
+    
+}
+
+.navbar-brand{
+    font-size: 2.3vw;
+    font-weight: 900;
+    color: rgb(2, 43, 46) !important;
+}
+
+.navbar-nav{
+    float:right
+}
+
+.nav-item{
+    margin-top: 0.7vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-size: 1.2vw;
+    color: #5e5b5b !important;
+}
+
+
+.btn-link{
+    font-size: 1.2vw;
+    padding-top: 0.8vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.btn-primary{
+    background-color: #306363 !important;
+    padding: 0.7vw 1vw 0.7vw 1vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-size: 1.2vw;
+}
+
