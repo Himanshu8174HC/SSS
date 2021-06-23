@@ -1,17 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../Components/HomeBody.css"; 
-import SignUp from './SignUp';
+
 function HomeBody(){
-    const RightStyle = {
-        color: "white",
-        backgroundColor: "DodgerBlue",
-        padding: "0px",
-        fontFamily: "Arial"
-      };
-    const FormStyle = {
-        padding: "150px",
-      };
+    
     return(
     <div className = "Bodyrow">
         <div className = "Introbody">
@@ -37,12 +29,6 @@ function HomeBody(){
                     <input type="password" className="form-control" placeholder="Enter password" />
                 </div>
 
-                <div className="form-group3">
-                    <div className="custom-control custom-checkbox">
-                        <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                        <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
-                    </div>
-                </div>
 
                 <button type="submit" className="btn  btn-block">Submit</button>
                 <p className="forgot-password text-right">

@@ -31,7 +31,7 @@
 }
 
 .FormControl{
-    margin-top:2.2vw;
+    margin-top:5vw;
     border-radius: 10px;
     width: 40vw;
     margin-left: 4vw;
@@ -59,9 +59,99 @@ form  h3{
 .btn-block{
     background-color: #306363 !important;
     padding: 0.7vw 1vw 0.7vw 1vw;
-    font-size: 1.2vw;
+    font-size: 1.4vw;
 }
-.form-group3{
-    margin-top: -0.7vw;
-    margin-bottom: 1vw;
+
+@media all and (max-width :1020px) and (min-width :850px) {
+    .Introbody h1{
+        font-family: Medium Poppins;;
+        margin-bottom: 2vw;
+        text-align: left;
+        font-size: 3.5vw;
+    }
+    
+    .Introbody p{
+        font-family:  Bold Poppins;
+        text-align: left;
+        font-size: 2vw;
+        text-align: justify;
+    } 
+    .FormControl{
+        margin-top:10vw;
+        border-radius: 10px;
+        width: 45vw;
+        
+        background-color: #b5c0c4;
+        
+        padding-top: 10vw;
+        padding-bottom: 7vw
+    }
+    .btn-block{
+        margin-top: 20px;
+        font-size: 2vw;
+    }
+    
+    
+}
+
+@media all and (max-width :850px) {
+    .Bodyrow{
+        display: flex !important;
+        flex-direction: column !important;
+        height :100%
+        
+    }
+    .Introbody{
+        margin-top: 10vw;
+        width: 90vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+      }
+      .FormControl{
+        margin-top:30px;
+        width: 90vw;
+        margin-left: 5vw;
+        margin-right: 10vw;
+        padding-right: 5vw;
+        }
+        .form-control{
+            height: 40px;
+        }
+        .Introbody h1{
+            font-weight: 500;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 30px;
+        }
+        
+        .Introbody p{
+            font-family:  Bold Poppins;
+            font-size: 17px;
+            
+        }
+        form  h3{
+            text-align: center !important;
+            margin-bottom: 1vw;
+            font-size: 30px;
+            
+        }
+        
+        .form-group{
+            
+            margin-top: 1.5vw;
+            font-size: 20px;
+        }
+
+        .forgot-password{
+            
+            font-size: 15px;
+
+
+        }
+        .btn-block{
+            background-color: #306363 !important;
+            padding: 0.7vw 1vw 0.7vw 1vw;
+            font-size: 20px;
+            margin-top:30px
+        }
+        
 }
