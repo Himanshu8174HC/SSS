@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import SignUpForm from './SignUpForm';
+
 import "./TopBar.css"
 
 
@@ -9,7 +10,6 @@ import "./TopBar.css"
   
   
   const [open, setOpen] = useState(false)
-  const [page, setPage] = useState("");
   
 
    return (
@@ -18,18 +18,26 @@ import "./TopBar.css"
          <div className = "logo">STUDENT SUPPORT PORTAL</div>
          <ul className = "nav-links" style = {{transform:open ?"translateX(0px)" :""}}>
          <li>
-         <a>Genral Problems</a>
+         <Link to = "/genralPro" >
+         <a >Genral Problems</a>
+         </Link>
          </li>
          <li>
-         <a>Academic Problems</a>
+         <Link to = "/academicPro" >
+         <a >Academic Problems</a>
+         </Link>
          </li>
          <li>
-         <a>Coding Problems</a>
+         <Link to =  "/codingPro">
+         <a  >Coding Problems</a>
+         </Link>
          </li>
          <li>
-         <button onClick={() => setPage("./SignUpForm")}>Sign Up</button>
+         <Link  to = "/signUp" >
+         <button>Sign Up</button>
+         </Link>
          </li>
-         {page === "./SignUpForm" ? <SignUpForm/> : null}
+         
 
          </ul>
          <i onClick ={() => setOpen(!open) } className="fas fa-bars burger"></i>
