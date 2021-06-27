@@ -19,24 +19,29 @@ import "./TopBar.css"
          <ul className = "nav-links" style = {{transform:open ?"translateX(0px)" :""}}>
          <li>
          <Link to = "/genralPro" >
-         <a >Genral Problems</a>
+         <a >Genral</a>
          </Link>
          </li>
          <li>
          <Link to = "/academicPro" >
-         <a >Academic Problems</a>
+         <a >Academic</a>
          </Link>
          </li>
          <li>
          <Link to =  "/codingPro">
-         <a  >Coding Problems</a>
+         <a  >Coding</a>
          </Link>
          </li>
-         <li>
+         
+         <li >
+         <Link  to = "/Login" >
+         <a className = 'Login'>Log In</a>
+         </Link>
          <Link  to = "/signUp" >
-         <button>Sign Up</button>
+         <button >Sign Up</button>
          </Link>
          </li>
+         
          
 
          </ul>
