@@ -93,8 +93,7 @@ a.Login:hover{
     
     box-shadow: 0 10px 20px #14141433;
    
-    
-    }
+}
 
   
   
@@ -113,9 +112,8 @@ nav .nav-links button{
     margin-right: 10px;
     margin-left: 25px;
     
-    
-    
 }
+
 nav .nav-links button:hover{
     
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
@@ -196,24 +194,14 @@ cursor: pointer;
         margin-top: -12px;
         float: left;
         
-        
-        
-        
-        
-        
     }
     a.Login:hover{
         box-shadow: 0 10px 20px #00000033;
         border:2px solid white;
         
         
-        
-        
-
     }
     
-  
-  
 }
 
 @media all and (max-width :1050px) and (min-width :900px) {
@@ -244,8 +232,4 @@ cursor: pointer;
         
     }
     
-    
-    
-
-
 } 
