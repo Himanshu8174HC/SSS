@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../Components/HomeBody.css"; 
+import image1 from "../Components/bodyimage.svg"
 
 function HomeBody(){
     
@@ -14,32 +15,13 @@ function HomeBody(){
             </p>
         </div>
 
-    <div className = "FormControl">
-        <div className = "formBody">
-            <form>
-                <h3>Sign In</h3>
-
-                <div className="form-group">
-                    <label>Email address</label>
-                    <input type="email" className="form-control" placeholder="Enter email" />
-                </div>
-
-                <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" />
-                </div>
-
-
-                <button type="submit" className="btn  btn-block">Submit</button>
-                <p className="forgot-password text-right">
-                    Forgot <a href="#pass">password?</a>
-                </p>
-            </form>
-        </div>
+    <div>
+    <img  className="bodyimg" src={image1} alt="bodyImg"></img>
+    </div>
     </div>  
 
     
-    </div>
+    
     )}
 
 export default HomeBody;

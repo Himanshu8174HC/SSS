@@ -15,7 +15,8 @@ import "./TopBar.css"
    return (
      <div>
        <nav>
-         <div className = "logo">STUDENT SUPPORT PORTAL</div>
+         <div className = "logo">SSP</div>
+         
          <ul className = "nav-links" style = {{transform:open ?"translateX(0px)" :""}}>
          <li>
          <Link to = "/genralPro" >
@@ -46,6 +47,7 @@ import "./TopBar.css"
 
          </ul>
          <i onClick ={() => setOpen(!open) } className="fas fa-bars burger"></i>
+        
        </nav>
      </div>
    )
