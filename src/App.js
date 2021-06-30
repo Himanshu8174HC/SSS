@@ -5,24 +5,36 @@ import GenralPro from "./Components/GenralPro";
 import AcademicPro from "./Components/AcademicPro";
 import CodingPro from "./Components/CodingPro";
 import {Switch, Route, Redirect} from "react-router-dom";
-import Login from "./Components/form/Login"
-// import {TrasitionGroup, CSSTransition} from "react-transition-group"
+import Login from "./Components/form/Login";
+import {AnimatePresence} from "framer-motion";
+import styled from "styled-components";
+
+const Section = styled.section`
+    overflow-x :hidden
+`
+
+
 
 
 function App() {
+ 
   return (
-    <div>
-    <Switch>
-        <Route exact path = "/" component = {Home} />
-        <Route exact path = "/signUp" component = {SignUpForm} />
-        <Route exact path = "/Login" component = {Login} />
-        <Route exact path = "/genralPro" component = {GenralPro} />
-        <Route exact path = "/academicPro" component = {AcademicPro} />
-        <Route exact path = "/codingPro" component = {CodingPro} />
-        <Redirect to = "/" />
+    
+    <Section>
+    <AnimatePresence>
+        <Switch >
+          <Route exact path = "/" component = {Home} />
+          <Route exact path = "/signUp" component = {SignUpForm} />
+          <Route exact path = "/Login" component = {Login} />
+          <Route exact path = "/genralPro" component = {GenralPro} />
+          <Route exact path = "/academicPro" component = {AcademicPro} />
+          <Route exact path = "/codingPro" component = {CodingPro} />
+          <Redirect to = "/" />
      
-    </Switch>
-    </div>
+        </Switch>
+    </AnimatePresence>
+    </Section>
+    
   );
 }
 
