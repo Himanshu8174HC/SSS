@@ -7,7 +7,6 @@ import {animationOne, transition} from "../Components/animation"
 
 
 
-
 function Home(){
     return <div>
     <motion.div initial = "out" animate = "in" exit = "out" variants = {animationOne} transition = {transition}>
