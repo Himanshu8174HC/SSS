@@ -6,6 +6,8 @@ import AcademicPro from "./Components/AcademicPro";
 import CodingPro from "./Components/CodingPro";
 import {Switch, Route, Redirect} from "react-router-dom";
 import Login from "./Components/form/Login";
+import Sucess from "../src/Components/form/Sucess"
+import Problems from "./Components/Problems";
 import {AnimatePresence} from "framer-motion";
 import styled from "styled-components";
 
@@ -29,6 +31,8 @@ function App() {
           <Route exact path = "/genralPro" component = {GenralPro} />
           <Route exact path = "/academicPro" component = {AcademicPro} />
           <Route exact path = "/codingPro" component = {CodingPro} />
+          <Route exact path = "/Sucess" component = {Sucess} />
+          <Route exact path = "/Problems" component = {Problems} />
           <Redirect to = "/" />
      
         </Switch>

@@ -1,0 +1,208 @@
+.sucessBody {
+    background-color: #9fdeaf;
+    height: 100vh;
+    font-family: "McLaren", cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+
+
+}
+
+svg {
+    width: 300px;
+    padding-top: 50px;
+}
+
+.sucessBody h1 {
+    font-size: 45px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: white
+}
+
+.sucessBody p {
+    font-size: 18px;
+    padding-top: 20px;
+
+}
+
+.sucessWithIMg {
+    display: flex;
+    flex-direction: row;
+    max-width: 90%;
+    word-wrap: break-word;
+    word-break: break-all;
+    text-align-last: center;
+}
+
+.sucessImage {
+    height: 55px;
+    width: 55px;
+    margin-top: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.sucessBody .LogInButton {
+    border: 2px solid white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 140px;
+    height: 40px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: none;
+    border-radius: 20px;
+    color: white;
+    margin-top: 10px;
+    text-decoration: underline #9fdeaf !important;
+}
+
+.sucessBody .LogInButton:hover {
+    color: gray;
+    border: 2px solid gray;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.cls-1 {
+    fill: #2c51a3;
+}
+
+.cls-2 {
+    fill: #faaf4c;
+}
+
+.cls-3 {
+    fill: #f16279;
+}
+
+.cls-4 {
+    fill: #78c8aa;
+}
+
+.cls-5 {
+    fill: none;
+    stroke-width: 6px;
+}
+
+.cls-5,
+.cls-6 {
+    stroke: #000;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+}
+
+.mask {
+    fill: black;
+    stroke: white;
+    stroke-width: 5px;
+}
+
+#squiggle-mask-path {
+    stroke-dasharray: 80;
+    stroke-dashoffset: 80;
+    animation: animate-stroke 1s 1.1s forwards cubic-bezier(0, 1, .53, 1);
+}
+
+#left-line-mask-path {
+    stroke-dasharray: 38;
+    stroke-dashoffset: -38;
+    animation: animate-stroke 1s 1.2s forwards cubic-bezier(0, 1, .53, 1);
+}
+
+#right-line-mask-path {
+    stroke-dasharray: 38;
+    stroke-dashoffset: -38;
+    animation: animate-stroke 1s 1.2s forwards cubic-bezier(0, 1, .53, 1);
+}
+
+@keyframes animate-stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+#mint-burst {
+    transform: translateY(70px);
+    animation: move-stars 1s 1s forwards cubic-bezier(0, 1, .53, 1);
+}
+
+#yellow-burst {
+    transform: translate(40px, 10px);
+    animation: move-stars 1s 1s forwards cubic-bezier(0, 1, .53, 1);
+}
+
+#red-burst {
+    transform: translate(-40px, 10px);
+    animation: move-stars 1s 1s forwards cubic-bezier(0, 1, .53, 1);
+}
+
+#blue-star {
+    transform: translate(10px, 40px);
+    animation: move-stars 1s 1025ms forwards cubic-bezier(0, 1, .53, 1);
+    display: inherit;
+}
+
+#yellow-star {
+    transform: translate(-10px, 45px);
+    animation: move-stars 1s 1050ms forwards cubic-bezier(0, 1, .53, 1);
+}
+
+@keyframes move-stars {
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.dot {
+    animation: reveal-dots 0.9s 1.2s both cubic-bezier(0, 1, .53, 1);
+    opacity: 0;
+    transform: translate(-5px, 10px);
+
+}
+
+.dot.left-side {
+    transform: translate(5px, 10px);
+}
+
+@keyframes reveal-dots {
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@media screen and (max-width :500px) {
+
+    .sucessBody h1 {
+        font-size: 28px;
+
+    }
+
+    .sucessBody p {
+        font-size: 20px;
+        padding-top: 20px;
+
+    }
+
+    .sucessBody .LogInButton {
+        font-size: 18px;
+        width: 150px;
+        height: 50px;
+    }
+
+    .sucessImage {
+        height: 45px;
+        width: 45px;
+        margin-top: 60px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}

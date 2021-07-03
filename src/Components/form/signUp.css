@@ -11,23 +11,28 @@ div.signupLeft {
     flex-direction: column;
     align-items: center;
     padding-top: 15vw;
-    height: 150vh
+    height: 140vh
 }
 
-h1.lefth1 {
-    font-size: 3.5vw;
+h1.lefth1-signup {
+    font-size: 40px;
     color: white;
     font-family: "McLaren", cursive;
 }
 
 p.loginINS {
     padding-top: 20px;
-    font-size: 15px !important;
+    font-size: 13px !important;
 }
 
 .signupLeft p {
-    font-size: 1.5vw;
+    font-size: 18px;
+    max-width: 90%;
+    word-wrap: break-word;
+    word-break: break-all;
+    text-align-last: center;
     font-family: "McLaren", cursive;
+
 }
 
 button.switch-button-signup {
@@ -43,6 +48,7 @@ button.switch-button-signup {
     border-radius: 20px;
     color: white;
     margin-top: 10px;
+    text-decoration: underline #9fdeaf !important;
 
 }
 
@@ -99,7 +105,7 @@ h1.signuprighthead {
     margin-bottom: 20px;
 }
 
-form#sign-in-form {
+form#sign-up-form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,7 +116,7 @@ form#sign-in-form {
     height: 25px;
 }
 
-#sign-in-form input {
+#sign-up-form input {
     margin: 15px;
     font-size: 14px;
     padding: 15px;
@@ -124,7 +130,7 @@ form#sign-in-form {
 
 }
 
-#sign-in-form input::placeholder {
+#sign-up-form input::placeholder {
     letter-spacing: 1px;
 }
 
@@ -141,6 +147,7 @@ button.control-button.signup {
     color: white;
     font-size: 18px;
     margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 button.control-button.signup:hover {
@@ -149,5 +156,53 @@ button.control-button.signup:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transform: translateY(-3px);
 
+
+}
+
+@media screen and (max-width :850px) {
+
+    div.signupBody {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.signupLeft {
+        width: 100%;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+        height: 100vh
+    }
+
+    h1.lefth1-signup {
+        font-size: 45px;
+    }
+
+    p.loginINS {
+        font-size: 15px !important;
+    }
+
+    .signupLeft p {
+        font-size: 18px;
+        max-width: 90%;
+        word-wrap: break-word;
+        word-break: break-all;
+        text-align-last: center;
+    }
+
+    .signupRight {
+        width: 100%;
+
+    }
+
+    #sign-up-form input {
+        margin: 13px;
+        font-size: 14px;
+        width: 70vw;
+    }
+
+    h1.signuprighthead {
+        margin-top: 40px;
+
+    }
 
 }

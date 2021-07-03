@@ -1,17 +1,27 @@
 import React from "react";
 import {motion} from "framer-motion"
+import { Link } from 'react-router-dom';
 import {animationTwo, transition} from "../animation"
-import "./signUp.css"
+import "./signUp.css";
+
 
 
 function SignUpForm(){
     return <motion.div initial = "out" animate = "end" exit = "out" variants = {animationTwo} transition = {transition}>
         <div className = "signupBody">
             <div className = "signupLeft">
-                <h1 className = "lefth1">Hello, Friend! </h1>
+                <h1 className = "lefth1-signup">Hello, Friend! </h1>
                 <p>Enter your personal details and start a journey with us</p>
                 <p className = "loginINS">If you have account please Sign In!</p>
+
+                
+                
+                <Link to = "/Login" activeClassName="active">
                 <button class="switch-button-signup" >SIGN IN</button>
+                </Link>
+                
+                
+                
             </div>
             <div className = "signupRight">
 
@@ -34,7 +44,7 @@ function SignUpForm(){
                 </div>
                 </div>
                <p class="small">or use your email account:</p>
-               <form id="sign-in-form">
+               <form id="sign-up-form">
                     <input type="text" placeholder="Full Name"/>     
                     <input type="email" placeholder=" IIT GOA Email"/>
                     <input type="password" placeholder="Password"/>
@@ -42,7 +52,14 @@ function SignUpForm(){
                     <input type="text" placeholder=" Batch"/>
                     <input type="text" placeholder=" Contact No"/>
                     <input type="text" placeholder="B.TECH/M.TECH/PHD"/>
+                    
+                    
+                    <Link to = "/Sucess" activeClassName="active">
                     <button class="control-button signup" >SIGN UP</button>
+                    </Link>
+                    
+                    
+
                </form>
         
             </div>

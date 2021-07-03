@@ -15,14 +15,14 @@ div.loginLeft {
 }
 
 h1.lefth1 {
-  font-size: 3.5vw;
+  font-size: 40px;
   color: white;
   font-family: "McLaren", cursive;
 }
 
 p.signupINS {
   padding-top: 20px;
-  font-size: 15px !important;
+  font-size: 13px !important;
 }
 
 .loginLeft p {
@@ -43,6 +43,7 @@ button.switch-button {
   border-radius: 20px;
   color: white;
   margin-top: 10px;
+  text-decoration: underline #9fdeaf !important;
 
 }
 
@@ -51,6 +52,7 @@ button.switch-button:hover {
   border: 2px solid gray;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transform: translateY(-3px);
+
 
 }
 
@@ -143,7 +145,7 @@ form#sign-in-form {
 }
 
 button.control-button.in {
-  width: 10vw;
+  width: 150px;
   height: 45px;
   border: 2px solid;
   border-radius: 20px;
@@ -161,5 +163,51 @@ button.control-button.in:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transform: translateY(-3px);
 
+
+}
+
+@media screen and (max-width :850px) {
+
+  div.loginBody {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div.loginLeft {
+    width: 100%;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    height: 100vh
+  }
+
+  h1.lefth1 {
+    font-size: 45px;
+  }
+
+  p.signupINS {
+    font-size: 15px !important;
+  }
+
+  .loginLeft p {
+    font-size: 18px;
+    max-width: 90%;
+    word-wrap: break-word;
+    word-break: break-all;
+    text-align-last: center;
+  }
+
+  .loginRight {
+    width: 100%;
+  }
+
+  #sign-in-form input {
+    margin: 13px;
+    font-size: 14px;
+    width: 70vw;
+  }
+
+  h1.righthead {
+    margin-top: 40px;
+  }
 
 }

@@ -1,5 +1,6 @@
 import React  from "react";
 import {motion} from "framer-motion"
+import { Link } from 'react-router-dom';
 import {animationTwo, transition} from "../animation"
 import "./Login.css"
 
@@ -14,7 +15,10 @@ function  Login(){
                 <h1 className = "lefth1">Welcome Back!</h1>
                 <p>To keep connected with us please login with your personal info</p>
                 <p className = "signupINS">If you don't have account please Sign Up!</p>
+                
+                <Link to = "/signUp" activeClassName="active">
                 <button class="switch-button" >SIGN UP</button>
+                </Link>
             </div>
             <div className = "loginRight">
 
@@ -41,7 +45,11 @@ function  Login(){
                     <input type="email" placeholder="Email"/>
                     <input type="password" placeholder="Password"/>
                     <p class="forgot-password">Forgot your password?</p>
+
+                    <Link to = "/Problems" activeClassName="active">
                     <button class="control-button in" >Sign in</button>
+                    </Link>
+
                </form>
         
             </div>
