@@ -46,7 +46,7 @@ function  Login(){
                     <input type="password" placeholder="Password"/>
                     <p class="forgot-password">Forgot your password?</p>
 
-                    <Link to = "/Problems" activeClassName="active">
+                    <Link to = "/AfterLogin" activeClassName="active">
                     <button class="control-button in" >Sign in</button>
                     </Link>
 

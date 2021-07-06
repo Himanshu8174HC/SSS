@@ -49,9 +49,9 @@ function SignUpForm(){
                     <input type="email" placeholder=" IIT GOA Email"/>
                     <input type="password" placeholder="Password"/>
                     <input type="password" placeholder=" Confirm Password"/>
-                    <input type="text" placeholder=" Batch"/>
+                    <input type="text" placeholder=" Batch Year"/>
                     <input type="text" placeholder=" Contact No"/>
-                    <input type="text" placeholder="B.TECH/M.TECH/PHD"/>
+                    <input type="text" placeholder="Program"/>
                     
                     
                     <Link to = "/Sucess" activeClassName="active">

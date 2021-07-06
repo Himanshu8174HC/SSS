@@ -5,6 +5,10 @@ export const animationOne = {
   },
   out: {
     opacity: 0
+  },
+  end: {
+    
+    opacity: 1
   }
 };
   

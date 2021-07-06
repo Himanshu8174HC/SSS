@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+    margin-top: 0.5vw;
+
+}
+
+
+nav {
+    display: flex;
+    min-height: 11vh;
+    align-items: center;
+    background-color: #9fdeaf;
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+
+
+}
+
+
+nav .logo {
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+    font-family: "McLaren", cursive;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    margin-left: 20px;
+
+
+}
+
+ul.nav-links {
+    display: flex;
+    letter-spacing: 2px;
+    margin-top: 1vw;
+    transform: translate3d(0vw, 0, 0);
+    align-items: center;
+    position: fixed;
+    right: 5%;
+
+}
+
+
+nav .nav-links a {
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 400;
+    font-family: "McLaren", cursive;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+nav .nav-links a:hover {
+    color: #aca0a0 !important;
+    text-decoration: none;
+}
+
+.Bodyrow {
+    display: flex !important;
+    flex-direction: row !important;
+    margin-top: 5vw;
+    height: 100%;
+    margin-top: 50px;
+
+}
+
+
+
+.Introbody {
+    margin-top: 10vw;
+    width: 42vw;
+    margin-left: 3vw;
+    margin-right: 5vw;
+}
+
+.Introbody h1 {
+    font-family: "McLaren", cursive;
+    margin-bottom: 2vw;
+    text-align: left;
+    font-size: 3vw;
+}
+
+.Introbody p {
+    font-family: "McLaren", cursive;
+    text-align: left;
+    font-size: 1.5vw;
+    text-align: justify;
+}
+
+img.bodyimg {
+    width: 50vw;
+    margin-top: 90px;
+    margin-right: 1vw;
+}
+
+.AskProblem {
+    margin-top: 30px;
+    height: 100vh;
+
+}
+
+.horizontalLine {
+    width: 30px;
+    height: 3.5px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.horizontalLineDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+h1.AskProblemHeading {
+    font-size: 2.5vw;
+    color: black;
+    font-family: "McLaren", cursive;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+form.questionInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 55vw;
+    width: 40vw;
+    background-color: #9fdeaf;
+    float: right;
+    margin-right: 3vw;
+    margin-left: 3vw;
+    border-radius: 10px;
+    justify-content: center;
+
+}
+
+select.listBoxInput,
+input.TopicInput,
+textarea.questioAreaInput {
+
+    font-family: "McLaren", cursive;
+    border-radius: 10px;
+    width: 30vw;
+    position: relative;
+    height: 3.5vw;
+    font-size: 1.2vw;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+select.listBoxInput:hover {
+    cursor: pointer;
+}
+
+input.TopicInput {
+    border: 0.5px solid #5a5757
+}
+
+textarea.questioAreaInput {
+
+    height: 22vw !important;
+    margin-bottom: 20px !important;
+    padding-top: 10px;
+
+}
+
+div.form-group {
+    position: relative
+}
+
+span.attachmentIcon {
+    font-family: "McLaren", cursive;
+    font-weight: 550;
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    font-size: 1.1vw
+}
+
+span.attachmentIcon:hover {
+    cursor: pointer;
+}
+
+i.fa.fa-paperclip {
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1.5px solid black;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 1px;
+    padding-bottom: 1px
+}
+
+button.questionSubmit {
+    width: 150px;
+    height: 40px;
+    border: 2px solid;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #5d5f5d;
+    color: white;
+    font-size: 18px;
+    border-color: #5d5f5d;
+    margin-bottom: 30px !important
+}
+
+button.questionSubmit:hover {
+
+
+    box-shadow: 0 10px 20px #00000033;
+    transform: translateY(-3px);
+}
+
+
+@media screen and (max-width :850px) {
+
+
+
+    nav.logo {
+        font-size: 40px;
+    }
+
+    div.logo {
+        width: 70%;
+
+    }
+
+    nav .burger {
+        display: block;
+        position: fixed;
+        right: 5%
+    }
+
+    nav .nav-links {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        margin-top: -10px;
+        margin-left: -10px;
+        height: 150vh;
+        background-color: #9fdeaf;
+        padding-top: 70px;
+        padding-right: 30px;
+        padding-left: 20px;
+        width: 50%;
+        transform: translate3d(-100vw, 0, 0);
+        transition: transform .3s cubic-bezier(0, .52, 0, 1);
+        overflow: hidden;
+    }
+
+
+    nav .nav-links a {
+        font-size: 18px;
+        cursor: pointer;
+
+    }
+
+    nav .nav-links li {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        border-bottom: 1.5px solid white;
+    }
+
+    .Bodyrow {
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100%
+    }
+
+    .Introbody {
+        margin-top: 10vw;
+        width: 90vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .Introbody h1 {
+        font-family: Medium "McLaren", cursive;
+        margin-bottom: 2vw;
+        text-align: left;
+        font-size: 5vw;
+    }
+
+    .Introbody p {
+        font-family: Bold "McLaren", cursive;
+        text-align: left;
+        font-size: 2.5vw;
+        text-align: justify;
+        margin-right: 10px;
+    }
+
+    img.bodyimg {
+        width: 80vw;
+        margin-top: 90px;
+        margin-right: 10vw;
+        margin-left: 10vw;
+    }
+
+
+
+    h1.AskProblemHeading {
+        font-size: 4.5vw;
+        padding-bottom: 10px;
+
+    }
+
+    form.questionInput {
+        height: 130vw;
+        width: 85vw;
+        margin-right: 6vw !important;
+        margin-left: 9vw !important;
+    }
+
+    select.listBoxInput,
+    input.TopicInput,
+    textarea.questioAreaInput {
+
+        width: 60vw;
+        position: relative;
+        height: 7vw;
+        font-size: 2.5vw;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-weight: 600;
+
+    }
+
+    select.listBoxInput:hover {
+        cursor: pointer;
+    }
+
+    input.TopicInput {
+        border: 0.5px solid #5a5757
+    }
+
+    textarea.questioAreaInput {
+
+        height: 30vw !important;
+        margin-bottom: 15px !important;
+        padding-top: 10px;
+
+    }
+
+    span.attachmentIcon {
+        font-family: "McLaren", cursive;
+        font-weight: 550;
+        position: absolute;
+        bottom: 40px;
+        right: 10px;
+        font-size: 1.5vw
+    }
+
+    span.attachmentIcon:hover {
+        cursor: pointer;
+    }
+
+    i.fa.fa-paperclip {
+        margin-left: 5px;
+        margin-right: 5px;
+        border: 1.5px solid black;
+        padding-left: 2px;
+        padding-right: 2px;
+        padding-top: 1px;
+        padding-bottom: 1px
+    }
+
+    button.questionSubmit {
+        width: 150px;
+        height: 40px;
+        border: 2px solid;
+        border-radius: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: #5d5f5d;
+        color: white;
+        font-size: 18px;
+        border-color: #5d5f5d;
+        margin-bottom: 30px !important
+    }
+
+
+
+
+}
+
+@media all and (max-width :1050px) and (min-width :850px) {
+
+    nav .logo {
+        font-size: 35px;
+        font-weight: 550;
+
+    }
+
+
+    nav .nav-links a {
+        font-size: 18px;
+        cursor: pointer;
+        font-weight: 500;
+    }
+
+    ul.nav-links {
+        margin-top: 1vw;
+        transform: translate3d(0vw, 0, 0);
+
+    }
+
+    .Introbody {
+        margin-top: 10vw;
+        width: 35vw;
+        margin-left: 3vw;
+        margin-right: 5vw;
+    }
+
+    .Introbody h1 {
+        font-family: Medium "McLaren", cursive;
+        margin-bottom: 2vw;
+        text-align: left;
+        font-size: 3.2vw;
+    }
+
+    .Introbody p {
+        font-family: Bold "McLaren", cursive;
+        text-align: left;
+        font-size: 1.8vw;
+        text-align: justify;
+    }
+
+    img.bodyimg {
+        width: 55vw;
+        margin-top: 90px;
+
+    }
+
+    form.questionInput {
+        height: 60vw;
+
+    }
+
+    select.listBoxInput,
+    input.TopicInput,
+    textarea.questioAreaInput {
+
+        position: relative;
+        height: 4vw;
+        font-size: 1.5vw;
+
+    }
+}
