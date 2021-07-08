@@ -4,14 +4,43 @@ import {motion} from "framer-motion"
 import {animationOne ,transition} from "./animation"
 import image1 from "../Components/bodyimage.svg"
 import "./AfterLoginPage.css"
+import Note from "./Note"
 
 
 function AfterLogin(){
     const [addrtype] = useState(["Problem Type" ,"Genral Problem", "Academics Problem", "Coding Problem"])
     const Add = addrtype.map(Add => Add
   )
- 
     const [open, setOpen] = useState(false)
+
+    const [note, setNote] = useState({
+        Topic_tag: "",
+        content: ""
+      });
+
+      function handleChange(event) {
+        const { name, value } = event.target;
+        setNote(prevNote => {
+            return {
+              ...prevNote,
+              [name]: value
+            };
+          });
+    }
+
+    const [items, setItems] = useState([])
+
+    const addItem = (event) =>{
+        if (!(note.content)){
+
+        }else{
+        setItems([...items, note])
+        setNote({
+            Topic_tag: "",
+            content: ""
+          })}
+    event.preventDefault();
+    };
 
     return <motion.div initial = "out" animate = "in" exit = "out" variants = {animationOne} transition = {transition}>
     <div>
@@ -58,7 +87,23 @@ function AfterLogin(){
     <hr className = "horizontalLine" ></hr>
     <hr className = "horizontalLine" ></hr>
     </div>
-   
+   <div className = "questionarie">
+   <div className = "ProblemDiv">
+        <h1 className = "ProblemsHeading">PROBLEMS</h1>
+        <hr className = "ProblemsHorizontal"></hr>
+        
+        
+        {items.map((noteItem, index) => {
+        return (
+          <Note
+            key={index}
+            id={index}
+            Topic_tag={noteItem.Topic_tag}
+            content={noteItem.content}
+          />
+        );
+      })}
+      </div>
     <div className = "AskProblem">
       
     
@@ -67,19 +112,21 @@ function AfterLogin(){
             <select className="listBoxInput">{
             Add.map((address, key) => <option key={key}value={key}>{address}</option>)}
             </select>
-            <input className = "TopicInput"  placeholder = "Topic Tag" />
+            <input name = "Topic_tag" value = {note.Topic_tag} onChange= {handleChange} className = "TopicInput"  placeholder = "Topic Tag..." />
             <div className="form-group">
-            <textarea className = "questioAreaInput" placeholder = "Ask your Question or add a attachment..." />
+            <textarea name = "content" value = {note.content} onChange= {handleChange} className = "questioAreaInput" placeholder = "Ask your Question or add a attachment..." />
             <span className = "attachmentIcon"><lable>add attachment</lable><i class="fa fa-paperclip" aria-hidden="true"></i></span>
             </div>
             
-            <button className = "questionSubmit">Submit</button>
+            <button className = "questionSubmit" onClick = {addItem} >Submit</button>
             
-
-    
         </form>
+        </div>
+        
+      </div>
+        
     
-    </div>
+    
 
     </motion.div>
     

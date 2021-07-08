@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import Home from "./Containers/Home";
 import  SignUpForm from "./Components/form/SignUpForm";
 import GenralPro from "./Components/GenralPro";
@@ -19,6 +19,8 @@ const Section = styled.section`
 
 
 function App() {
+
+  
  
   return (
     
@@ -32,7 +34,7 @@ function App() {
           <Route exact path = "/academicPro" component = {AcademicPro} />
           <Route exact path = "/codingPro" component = {CodingPro} />
           <Route exact path = "/Sucess" component = {Sucess} />
-          <Route exact path = "/AfterLogin" component = {AfterLogin} />
+          <Route exact path = "/AfterLogin"  component = {AfterLogin} />
           <Redirect to = "/" />
      
         </Switch>

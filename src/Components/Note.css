@@ -1,0 +1,52 @@
+.note {
+    background: #9fdeaf;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #4e4e4e;
+    padding: 10px;
+    width: 40vw;
+    margin: 16px;
+    float: left;
+    margin-left: 3vw;
+}
+
+.note h1 {
+    font-size: 1.1em;
+    margin-bottom: 6px;
+    font-family: "McLaren", cursive;
+    color: black
+}
+
+.note p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: "McLaren", cursive;
+    color: black
+}
+
+.note button {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    outline: none;
+    background-color: #9fdeaf;
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width :850px) {
+    .note {
+
+        width: 80vw;
+
+
+
+    }
+
+}
