@@ -7,6 +7,7 @@ import "./AfterLoginPage.css"
 import Note from "./Note"
 
 
+
 function AfterLogin(){
     const [addrtype] = useState(["Problem Type" ,"Genral Problem", "Academics Problem", "Coding Problem"])
     const Add = addrtype.map(Add => Add
@@ -28,19 +29,58 @@ function AfterLogin(){
           });
     }
 
+
     const [items, setItems] = useState([])
+    const [update, setupdate] = useState(true);
+    const [Edited, setEdited] = useState(null);
 
     const addItem = (event) =>{
-        if (!(note.content)){
-
+        if (!(note.content) ||!(note.Topic_tag) ){
+          alert("Empty Topic Tag or question field")
+        }else if(note && !update ){
+          setItems(
+            items.map((noteItem) => {
+              if (noteItem.id === Edited){
+                return{ ...noteItem, name:note}
+              }
+              return noteItem
+            })
+          )
+          setupdate(true)
+          setNote({
+            Topic_tag: "",
+            content: ""
+          })
+          setEdited(null)
         }else{
-        setItems([...items, note])
+          const allNote = {id: new Date().getTime().toString(), name:note}
+        setItems([...items, allNote])
         setNote({
             Topic_tag: "",
             content: ""
           })}
     event.preventDefault();
     };
+
+    const deleteNote = (index) => {
+      
+      const updateItems = items.filter((noteItem) => {
+        return index !== noteItem.id;
+      });
+      setItems(updateItems)
+      
+    };
+
+    const editNote = (id) =>{
+      let newEditItem = items.find((noteItem) =>{
+        return (noteItem.id === id)
+
+    });
+    
+    setupdate(false)
+    setNote(newEditItem.name)
+    setEdited(id)
+  }
 
     return <motion.div initial = "out" animate = "in" exit = "out" variants = {animationOne} transition = {transition}>
     <div>
@@ -49,18 +89,18 @@ function AfterLogin(){
          
          <ul className = "nav-links" style = {{transform:open ?"translateX(0px)" :""}}>
          <li>
-         <Link to = "/genralPro" activeClassName="active" >
-         <a >Genral</a>
+         <Link to = "/genralPro"  >
+         Genral
          </Link>
          </li>
          <li>
-         <Link to = "/academicPro" activeClassName="active" >
-         <a >Academic</a>
+         <Link to = "/academicPro"  >
+         Academic
          </Link>
          </li>
          <li>
-         <Link to =  "/codingPro" activeClassName="active">
-         <a  >Coding</a>
+         <Link to =  "/codingPro" >
+         Coding
          </Link>
          </li>
          </ul>
@@ -93,16 +133,19 @@ function AfterLogin(){
         <hr className = "ProblemsHorizontal"></hr>
         
         
-        {items.map((noteItem, index) => {
+        {items.map((noteItem) => {
         return (
           <Note
-            key={index}
-            id={index}
-            Topic_tag={noteItem.Topic_tag}
-            content={noteItem.content}
+            key={noteItem.id}
+            id={noteItem.id}
+            Topic_tag={noteItem.name.Topic_tag}
+            content={noteItem.name.content}
+            onDelete={deleteNote}
+            onEdit = {editNote}
           />
         );
       })}
+      
       </div>
     <div className = "AskProblem">
       
@@ -115,10 +158,13 @@ function AfterLogin(){
             <input name = "Topic_tag" value = {note.Topic_tag} onChange= {handleChange} className = "TopicInput"  placeholder = "Topic Tag..." />
             <div className="form-group">
             <textarea name = "content" value = {note.content} onChange= {handleChange} className = "questioAreaInput" placeholder = "Ask your Question or add a attachment..." />
-            <span className = "attachmentIcon"><lable>add attachment</lable><i class="fa fa-paperclip" aria-hidden="true"></i></span>
+            <span className = "attachmentIcon"><span>add attachment</span><i className="fa fa-paperclip" aria-hidden="true"></i></span>
             </div>
+            {
+              update ? <button className = "questionSubmit" onClick = {addItem} >Submit</button> :
+              <button className = "questionSubmit" onClick = {addItem} >Update</button>
+            }
             
-            <button className = "questionSubmit" onClick = {addItem} >Submit</button>
             
         </form>
         </div>

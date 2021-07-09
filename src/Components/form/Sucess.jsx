@@ -17,7 +17,7 @@ function Sucess(){
         </div>
         
         <p>Please Log in!</p>
-        <Link to = "/Login" activeClassName="active">
+        <Link to = "/Login" >
         <button class="LogInButton" >Sign in</button>
         </Link>
         <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 123 94.09" > 

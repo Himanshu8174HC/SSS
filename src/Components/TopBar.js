@@ -19,32 +19,30 @@ import "./TopBar.css"
          
          <ul className = "nav-links" style = {{transform:open ?"translateX(0px)" :""}}>
          <li>
-         <Link to = "/genralPro" activeClassName="active" >
-         <a >Genral</a>
+         <Link to = "/genralPro" >
+         Genral
          </Link>
          </li>
          <li>
-         <Link to = "/academicPro" activeClassName="active" >
-         <a >Academic</a>
+         <Link to = "/academicPro"  >
+         Academic
          </Link>
          </li>
          <li>
-         <Link to =  "/codingPro" activeClassName="active">
-         <a  >Coding</a>
+         <Link to =  "/codingPro" >
+         Coding
          </Link>
          </li>
          
          <li >
-         <Link  to = "/Login" activeClassName="active" >
-         <a className = 'Login'>Log In</a>
+         <Link  to = "/Login"  className = 'Login'>
+         Log In
          </Link>
-         <Link  to = "/signUp" activeClassName="active" >
+         <Link  to = "/signUp" >
          <button >Sign Up</button>
          </Link>
          </li>
          
-         
-
          </ul>
          <i onClick ={() => setOpen(!open) } className="fas fa-bars burger"></i>
         
