@@ -9,10 +9,12 @@ import Note from "./Note"
 
 
 function AfterLogin(){
-    const [addrtype] = useState(["Problem Type" ,"Genral Problem", "Academics Problem", "Coding Problem"])
-    const Add = addrtype.map(Add => Add
-  )
+
+    const [Type, setType] = useState(Option[0])
     const [open, setOpen] = useState(false)
+    const [items, setItems] = useState([])
+    const [update, setupdate] = useState(true);
+    const [Edited, setEdited] = useState(null);
 
     const [note, setNote] = useState({
         Topic_tag: "",
@@ -30,9 +32,7 @@ function AfterLogin(){
     }
 
 
-    const [items, setItems] = useState([])
-    const [update, setupdate] = useState(true);
-    const [Edited, setEdited] = useState(null);
+    
 
     const addItem = (event) =>{
         if (!(note.content) ||!(note.Topic_tag) ){
@@ -46,13 +46,18 @@ function AfterLogin(){
               return noteItem
             })
           )
+         
           setupdate(true)
           setNote({
             Topic_tag: "",
             content: ""
           })
           setEdited(null)
-        }else{
+        }else if (Type === Option[0]){
+          alert("Please Select The Problem Type")
+
+        }
+          else{
           const allNote = {id: new Date().getTime().toString(), name:note}
         setItems([...items, allNote])
         setNote({
@@ -80,7 +85,10 @@ function AfterLogin(){
     setupdate(false)
     setNote(newEditItem.name)
     setEdited(id)
+    
   }
+
+  
 
     return <motion.div initial = "out" animate = "in" exit = "out" variants = {animationOne} transition = {transition}>
     <div>
@@ -150,10 +158,19 @@ function AfterLogin(){
     <div className = "AskProblem">
       
     
-        <form className="questionInput">
+        <form className="questionInput" >
             <h1 className = "AskProblemHeading" >Ask Your Question here</h1>
-            <select className="listBoxInput">{
-            Add.map((address, key) => <option key={key}value={key}>{address}</option>)}
+            <select className="listBoxInput" 
+            defaultValue = {Type}
+            value = {Type}
+              onChange = {(e) =>{
+              const selectedType = e.target.value;
+              setType(selectedType)
+            }}>
+            <option  selected disabled > Problem Type</option>
+            <option value = "GenralPro"> Genral Problem</option>
+            <option value = "AcademicPro"> Academic Problem</option>
+            <option value = "CodingPro"> Coding Problem</option>
             </select>
             <input name = "Topic_tag" value = {note.Topic_tag} onChange= {handleChange} className = "TopicInput"  placeholder = "Topic Tag..." />
             <div className="form-group">
