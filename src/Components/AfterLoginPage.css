@@ -10,6 +10,10 @@ li {
 
 }
 
+a.AfterLoginLogoLink {
+    text-decoration: none;
+}
+
 
 nav {
     display: flex;
@@ -25,7 +29,7 @@ nav {
 }
 
 
-nav .logo {
+div.Afterloginlogo {
     font-size: 35px;
     font-weight: 600;
     color: white;
@@ -34,8 +38,12 @@ nav .logo {
     padding-left: 10px;
     margin-left: 20px;
 
-
 }
+
+
+
+
+
 
 ul.nav-links {
     display: flex;
@@ -104,34 +112,7 @@ img.bodyimg {
     margin-right: 1vw;
 }
 
-div.questionarie {
-    display: flex;
-    flex-direction: row;
 
-}
-
-
-h1.ProblemsHeading {
-
-    font-family: Poppins;
-    font-weight: 950;
-    margin-left: 30px;
-}
-
-hr.ProblemsHorizontal {
-    width: 45vw;
-    height: 0.1vw;
-    background-color: black;
-    margin-left: 20px;
-    border-radius: 10px;
-}
-
-.AskProblem {
-    margin-top: 30px;
-    height: 90vw;
-    margin-left: 6vw;
-
-}
 
 .horizontalLine {
     width: 30px;
@@ -149,6 +130,80 @@ hr.ProblemsHorizontal {
     padding-top: 30px;
 }
 
+div.questionarie {
+    display: flex;
+    flex-direction: row;
+
+}
+
+div.ProblemDiv {
+    width: 35vw;
+    margin-left: 1.5vw;
+    margin-right: 3.5vw;
+
+}
+
+
+h1.ProblemsHeading {
+    font-family: "McLaren", cursive;
+    margin-left: 10px;
+}
+
+hr.ProblemsHorizontal {
+    width: 33vw;
+    height: 0.1vw;
+    background-color: black;
+    border-radius: 10px;
+}
+
+p.ProblemDivPara {
+    font-size: 1.5vw;
+    font-family: "McLaren", cursive;
+    text-align: justify;
+    margin-left: 0.5vw;
+    margin-top: 30px;
+
+}
+
+ul.WorkLinks {
+    margin-top: 40px;
+}
+
+div.WorkLinksDiv {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+i.far.fa-dot-circle {
+    margin-left: 10px;
+    margin-right: 20px;
+    font-size: 1.6vw;
+    margin-top: 12px;
+    color: #6caf9e;
+}
+
+a.WorkAnchor {
+    font-size: 1.6vw;
+    font-family: "McLaren", cursive;
+    text-decoration: none;
+    color: #9fdeaf;
+    letter-spacing: 1px;
+}
+
+a.WorkAnchor:hover {
+    color: #aca0a0
+}
+
+.AskProblem {
+    margin-top: 30px;
+    height: 90vw;
+    width: 50vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+
+}
+
 h1.AskProblemHeading {
     font-size: 2.5vw;
     color: black;
@@ -164,9 +219,8 @@ form.questionInput {
     flex-direction: column;
     align-items: center;
     height: 55vw;
-    width: 40vw;
+    width: 50vw;
     background-color: #9fdeaf;
-    float: right;
     margin-right: 3vw;
     margin-left: 3vw;
     border-radius: 10px;
@@ -180,7 +234,7 @@ textarea.questioAreaInput {
 
     font-family: "McLaren", cursive;
     border-radius: 10px;
-    width: 30vw;
+    width: 40vw;
     position: relative;
     height: 3.5vw;
     font-size: 1.2vw;
@@ -357,21 +411,21 @@ button.questionSubmit:hover {
     div.ProblemDiv {
         margin-top: 130px;
         width: 80vw;
-        margin-left: 4.5vw;
+
     }
 
 
-    h1.ProblemsHeading {
-
-
-        margin-left: 20px;
-    }
 
     hr.ProblemsHorizontal {
-        width: 85vw;
+        width: 90vw;
         height: 0.2vw;
-        margin-left: 20px;
-        border-radius: 10px;
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+
+    h1.ProblemsHeading {
+        margin-left: 30px;
+        font-size: 25px;
     }
 
 
@@ -381,18 +435,54 @@ button.questionSubmit:hover {
 
     }
 
+    p.ProblemDivPara {
+        font-size: 16px;
+        margin-left: 35px;
+        width: 88vw;
+        line-height: 3rem;
+        margin-left: 4vw;
+        margin-right: 8vw;
+    }
+
+    ul.WorkLinks {
+        margin-left: 10px;
+    }
+
+    i.far.fa-dot-circle {
+        margin-left: 10px;
+        margin-right: 20px;
+        font-size: 18px;
+        margin-top: 10px;
+
+    }
+
+    a.WorkAnchor {
+        font-size: 18px;
+        margin-bottom: 10px;
+        margin-left: 2px;
+
+    }
+
+    .AskProblem {
+        margin-top: 30px;
+        height: 90vw;
+        width: 100vw;
+
+    }
+
     form.questionInput {
         height: 100vw;
         width: 85vw;
-        margin-right: 6vw !important;
-        margin-left: 9vw !important;
+        margin-left: 1.5vw;
+
+
     }
 
     select.listBoxInput,
     input.TopicInput,
     textarea.questioAreaInput {
 
-        width: 60vw;
+        width: 65vw;
         position: relative;
         height: 6vw;
         font-size: 2.5vw;

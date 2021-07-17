@@ -18,22 +18,6 @@ import "./TopBar.css"
          <div className = "logo">SSP</div>
          
          <ul className = "nav-links" style = {{transform:open ?"translateX(0px)" :""}}>
-         <li>
-         <Link to = "/genralPro" >
-         Genral
-         </Link>
-         </li>
-         <li>
-         <Link to = "/academicPro"  >
-         Academic
-         </Link>
-         </li>
-         <li>
-         <Link to =  "/codingPro" >
-         Coding
-         </Link>
-         </li>
-         
          <li >
          <Link  to = "/Login"  className = 'Login'>
          Log In
