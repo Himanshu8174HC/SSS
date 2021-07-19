@@ -228,7 +228,6 @@ form.questionInput {
 
 }
 
-select.listBoxInput,
 input.TopicInput,
 textarea.questioAreaInput {
 
@@ -244,9 +243,62 @@ textarea.questioAreaInput {
     margin-bottom: 10px;
 }
 
-select.listBoxInput:hover {
-    cursor: pointer;
+div.css-2b097c-container {
+    font-size: 1.2vw;
+    font-family: "McLaren", cursive;
+    width: 40vw;
 }
+
+div.css-yk16xz-control {
+    height: 3.5vw;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 0.5px solid #525151
+}
+
+div.css-tlfecz-indicatorContainer:hover {
+    cursor: auto;
+}
+
+div.css-1gtu0rj-indicatorContainer:hover {
+    cursor: auto
+}
+
+div.css-1pahdxg-control {
+    height: 3.5vw;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border-style: solid black !important;
+    box-shadow: 0 0 0 0 black !important;
+
+
+}
+
+div.css-1pahdxg-control:hover {
+    border-color: black !important;
+    box-shadow: none !important;
+}
+
+div.css-g1d714-ValueContainer {
+    position: initial;
+    box-shadow: none;
+    padding-left: 8px;
+    padding-bottom: 0;
+}
+
+div.css-1hb7zxy-IndicatorsContainer {
+    width: 0
+}
+
+div.css-2613qy-menu {
+    cursor: pointer;
+    border-color: none;
+}
+
 
 input.TopicInput {
     border: 0.5px solid #5a5757
@@ -478,23 +530,34 @@ button.questionSubmit:hover {
 
     }
 
-    select.listBoxInput,
+    div.css-2b097c-container {
+        font-size: 2.5vw;
+        width: 65vw;
+    }
+
+    div.css-yk16xz-control {
+        height: 5vw;
+
+    }
+
+    div.css-1pahdxg-control {
+        height: 5vw;
+
+    }
+
+
     input.TopicInput,
     textarea.questioAreaInput {
 
         width: 65vw;
         position: relative;
-        height: 6vw;
+        height: 6.3vw;
         font-size: 2.5vw;
         margin-top: 1.5vw;
         padding-left: 10px;
         padding-right: 10px;
         font-weight: 600;
 
-    }
-
-    select.listBoxInput:hover {
-        cursor: pointer;
     }
 
     input.TopicInput {
@@ -604,7 +667,7 @@ button.questionSubmit:hover {
 
     }
 
-    select.listBoxInput,
+
     input.TopicInput,
     textarea.questioAreaInput {
 
@@ -613,21 +676,24 @@ button.questionSubmit:hover {
         font-size: 1.5vw;
 
     }
+
+
+
 }
 
 @media screen and (max-width :450px) {
 
     form.questionInput {
-        height: 120vw !important;
+        height: 125vw !important;
 
     }
 
-    select.listBoxInput,
+
     input.TopicInput,
     textarea.questioAreaInput {
 
 
-        height: 7vw;
+        height: 9vw;
         font-size: 2.5vw;
         margin-top: 1.5vw;
         padding-left: 10px;
@@ -635,6 +701,22 @@ button.questionSubmit:hover {
         font-weight: 600;
 
     }
+
+    div.css-yk16xz-control {
+        height: 9vw;
+        min-height: 4vw;
+
+
+
+    }
+
+    div.css-1pahdxg-control {
+        height: 9vw;
+
+
+    }
+
+
 
 
 }

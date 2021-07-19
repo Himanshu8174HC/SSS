@@ -4,6 +4,7 @@ import {motion} from "framer-motion"
 import {animationOne ,transition} from "./animation"
 import image1 from "../Components/bodyimage.svg"
 import "./AfterLoginPage.css"
+import Select from "react-select";
 import Note from "./Note"
 
 
@@ -15,6 +16,7 @@ function AfterLogin(){
     const [items, setItems] = useState([])
     const [update, setupdate] = useState(true);
     const [Edited, setEdited] = useState(null);
+    const [Type, setType] = useState("ProType");
     
 
     const [note, setNote] = useState({
@@ -29,6 +31,8 @@ function AfterLogin(){
     const addItem = (event) =>{
         if (!(note.content) ||!(note.Topic_tag)) {
           alert("Empty Topic Tag or question field")
+        }else if (Type === "ProType"){
+           alert("Please select Problem Type")
         }
         else if(note && !update){
           setItems(
@@ -55,7 +59,8 @@ function AfterLogin(){
           setNote({
             Topic_tag: "",
             content: ""
-          })}
+          })
+        setType("ProType")}
     event.preventDefault();
     };
 
@@ -91,6 +96,16 @@ function AfterLogin(){
       
       
 }
+const options = [
+  { value: "ProType",  label: "Select Problem Type",isDisabled: true},
+  { value: "GenralPro", label: "Genral Problem" },
+  { value: "AcadPro", label: "Academic Problem" },
+  { value: "CodingPro", label: "Coding Problem" }
+];
+
+const handleChangeAfter = (value) => {
+  setType(value);
+};
   
   
 return <motion.div initial = "out" animate = "in" exit = "out" variants = {animationOne} transition = {transition}>
@@ -198,12 +213,13 @@ return <motion.div initial = "out" animate = "in" exit = "out" variants = {anima
     
         <form className="questionInput"  >
             <h1 className = "AskProblemHeading" >Ask Your Question here</h1>
-            <select className="listBoxInput">
-            <option style = {{background : "#1491ff"}} value = "ProType" >  Select Problem Type</option>
-            <option   value = "GenralPro"> Genral Problem</option>
-            <option value = "AcademicPro"> Academic Problem</option>
-            <option value = "CodingPro"> Coding Problem</option>
-            </select>
+            <Select
+                  minMenuHeight= "300px"
+                  isSearchable={false}
+                  value={Type}
+                  onChange={handleChangeAfter}
+                  options={options}
+            />
             <input name = "Topic_tag" value = {note.Topic_tag} onChange= {handleChange} className = "TopicInput"  placeholder = "Topic Tag..." />
             <div className="form-group">
             <textarea name = "content" value = {note.content} onChange= {handleChange} className = "questioAreaInput" placeholder = "Ask your Question or add a attachment..." />
